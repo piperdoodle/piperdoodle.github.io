@@ -1,0 +1,31 @@
+---
+layout: default
+title: Oodles of Doodles
+---
+
+<div class="jumbotron">
+    <div class="container jumbotext">
+      <h1 class="display-4">Oodles of Doodles</h1>
+      <p class="lead">experience the adventures of our doodles</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card-deck">
+        {% for post in site.posts limit:9 %}
+            {% assign indexmod3 = forloop.index | modulo: 3 %}
+            {% if indexmod3 == 0 %}<div style="clear: both;"></div>{% endif %}
+            <div class="card postcard">
+                <a class="stretched-link" href={{ post.url }}>
+                <h3 class="title">{{ post.title }}</h3>
+                <div>
+                <time datetime="{{ post.date | date_to_xmlschema }}">
+                    posted on {{ post.date | date: "%B %-d, %Y" }}
+                </time> |    <div class="ood-author"> by <img class="avatar" src="http://1.gravatar.com/avatar/{{site.data.gravatars[post.author].gravatar}}"> {{ post.author }} </div>
+                </div>
+                <p class="summary">{{ post.excerpt }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

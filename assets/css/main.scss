@@ -1,0 +1,70 @@
+---
+---
+
+@import 'bootstrap/bootstrap';
+
+.copyright {
+    text-align: center;
+    padding: 60px;
+    height: 2em;
+}
+
+.jumbotron {
+    background: url("../img/jumbotron.jpg") no-repeat center;
+    color: white;
+    text-shadow: 2px 2px grey; 
+    height: 600px;
+
+    .jumbotext {
+        text-align: center;
+        top: 200px;
+        position: relative;
+    }
+}
+
+.postcard {
+    margin: 10px;
+    padding: 10px;
+    min-width: 150px;
+    min-height: 150px;
+    margin-left:10px;
+    margin-right: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .title {
+        font-size: 1.5em;
+        color: dark-grey;
+    }
+
+    .summary {
+        font-size: 1em;
+        color: grey;
+    }
+
+}
+
+.ood-post {
+   padding-top: 20px;
+   font-family: Roboto; 
+
+   .ood-post-content {
+       padding-top: 20px;
+   }
+}
+
+.ood-author {
+    display: inline-block;
+}
+
+.avatar {
+    vertical-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+

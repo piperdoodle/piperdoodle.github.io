@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+
+
+<div class="ood-post row justify-content-center">
+    <div class="col-8">
+        <div>
+        <label class="ood-author">Author</label>
+        <div class="ood-author" >{{ page.author }} </div>
+        </div>
+    <div class="ood-readtime">Reading time {{ page.readtime | 0 }} minutes.</div>
+    <div class="ood-postdate"><!-- Whitespace added for readability -->
+        Posted on 
+        {% assign dy = page.date | date: "%A" %}
+        {% case dy %}
+          {% when "Tue" %}Tues
+          {% when "Thu" %}Thurs
+          {% else %}{{ dy }}
+          {% endcase %},  
+        {{ page.date | date: "%B" }} 
+        {{ page.date | date: "%-d" }}, 
+        {{ page.date | date: "%Y" }}
+    </div>
+
+    <div class="ood-post-content">
+        {{content}}
+    </div>
+</div>
+
+</div>
